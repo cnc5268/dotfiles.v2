@@ -1,0 +1,55 @@
+@keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+window {
+    animation-name: fadeInLeft;
+    animation-duration: .5s;
+    border: 1px solid rgba(255,255,255,.5);
+    background-color: #282a36;
+    font-family: "Terminus (TTF)";
+}
+
+#input {
+    margin: 5px;
+    border: none;
+    background-color: #44475a;
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: #282a36;
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: #282a36;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+}
+
+#entry:selected {
+    background-color: #44475a;
+}
+

@@ -1,0 +1,47 @@
+version = 3
+final_space = true
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
+[transient_prompt]
+  template = '➜ '
+  background = 'transparent'
+  foreground_templates = ['{{if gt .Code 0}}#A8334C{{end}}', '{{if eq .Code 0}}#CFC1BA{{end}}']
+
+  [[blocks.segments]]
+    template = '@{{ .UserName }} '
+    foreground = '#A8334C'
+    type = 'session'
+    style = 'plain'
+
+  [[blocks.segments]]
+    template = '➜'
+    foreground = '#CFC1BA'
+    type = 'text'
+    style = 'plain'
+
+  [[blocks.segments]]
+    template = ' {{ .Path }}'
+    foreground = '#CFC1BA'
+    type = 'path'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      style = 'folder'
+
+  [[blocks.segments]]
+    template = ' <#A8334C>git(</>{{ .HEAD }}<#88507D>)</>'
+    foreground = '#CFC1BA'
+    type = 'git'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      branch_icon = ''
+
+  [[blocks.segments]]
+    template = ' '
+    foreground = '#94253E'
+    type = 'status'
+    style = 'plain'

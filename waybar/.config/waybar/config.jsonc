@@ -1,0 +1,80 @@
+{
+    "height": 32,
+	"margin": 10,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+    ],
+    "modules-right": [
+        "network",
+		"custom/seperator2",
+        "backlight",
+		"custom/seperator2",
+		"pulseaudio",
+		"custom/seperator2",
+        "battery",
+		"custom/seperator1",
+        "clock",
+		"custom/seperator3",
+        "tray"
+    ],
+	"custom/seperator1": {
+		"format": " | "
+	},
+	"custom/seperator2": {
+		"format": " · "
+	},
+	"custom/seperator3": {
+		"format": " |"
+	},
+    "network": {
+		"format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+        "format-wifi": "{ifname} {icon}",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰅛"
+    },
+    "backlight": {
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "format": "{percent}% {icon}"
+    },
+	"pulseaudio": {
+		"format": "{volume}% ",
+		"format-muted": ""
+	},
+    "battery": {
+        "states": {
+            "good": 21,
+            "warning": 20,
+            "critical": 10
+        },
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󰂄"
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+    "clock": {
+        "format": "{:%R %Z} 󰥔"
+    }
+}
+    "bluetooth": {
+        "format": "\udb80\udcaf",
+        "format-disabled": "\udb80\udcb2",
+        "format-connected": "\udb80\udcb1",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
+
+    "hyprland/language": {
+        "format": "{short}"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 16
+    }
+}

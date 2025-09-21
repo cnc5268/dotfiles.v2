@@ -1,0 +1,28 @@
+#!/usr/bin/env fish
+
+# Set device to be toggled
+set HYPRLAND_DEVICE "ftcs1000:00-2808:0105-touchpad"
+set HYPRLAND_VARIABLE "device[$HYPRLAND_DEVICE]:enabled"
+
+# The XDG_RUNTIME_DIR block seems unnecessary for this script's core functionality
+# and might be better handled by your overall environment setup.
+# If you encounter issues without it, you can re-add it, but it's removed for simplicity.
+# if [ -z "$XDG_RUNTIME_DIR" ];
+# else
+#  export XDG_RUNTIME_DIR=/run/user/$(id -u)
+# end
+
+# Get the current state of the device (output will be 'int: 1' or 'int: 0')
+set current_state "$(hyprctl getoption $HYPRLAND_VARIABLE)"
+
+# Check the current state and toggle accordingly
+if string match -q "int: 1" "$current_state"
+    # If the device is enabled ('int: 1'), disable it
+    notify-send "Disabling Touchpad"
+    hyprctl keyword $HYPRLAND_VARIABLE false
+else
+    # If the device is disabled or state is unknown, enable it
+    # We assume anything other than 'int: 1' means it should be enabled on toggle
+    notify-send "Enabling Touchpad"
+    hyprctl keyword $HYPRLAND_VARIABLE true
+end
