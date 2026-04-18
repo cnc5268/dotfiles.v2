@@ -83,7 +83,7 @@ return {
                 },
             })
 
-            ColorMyPencils();
+            ColorMyPencils("tokyonight");
         end
     },
 
