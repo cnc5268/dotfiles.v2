@@ -1,12 +1,9 @@
 general.import = [
-  "~/.config/alacritty/catppuccin-mocha.toml"
+  "~/.config/alacritty/ayu-dark.toml"
 ]
 
 [colors.primary]
 background = "#000000"
-foreground = "#CDD6F4"
-dim_foreground = "#CDD6F4"
-bright_foreground = "#CDD6F4"
 
 [env]
 TERM = "xterm-256color"
@@ -33,3 +30,7 @@ style = "Italic"
 # family = "MesloLGS Nerd Font Mono"
 family = "CaskaydiaCove Nerd Font"
 style = "Regular"
+
+[window]
+opacity = 0.75
+padding = { x = 5, y = 5 }
